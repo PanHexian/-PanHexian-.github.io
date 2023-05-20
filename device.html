@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>潘和弦</title>
+</head>
+
+<body>
+<p style="color: crimson">
+	Factor = 0.85,0.95,1.2
+	</p>
+	<p>
+	  <input id="device1" />
+	</p>
+	<p>
+	  <input id="device2" />
+	</p>
+	<p>
+	  <input id="device3" />
+	</p>
+	<p>
+	  <input id="device4" />
+	</p>
+	<p style="color: crimson">
+	Fctor = 0.8,0.95,1.2
+	</p>
+	<p>
+	  <input id="device5" />
+	</p>
+	<p>
+	  <input id="device6" />
+	</p>
+	<p>
+	  <input id="device7" />
+	</p>
+	<p>
+	  <input id="device8" />
+	</p>
+	<button style="color: #001FB0" onClick="get()">Obtain allocation results</button>
+</body>
+	<script>
+	
+
+		function get()
+		{
+			var device1num = Number(document.getElementById("device1").value);
+			var device2num = Number(document.getElementById("device2").value);
+			var device3num = Number(document.getElementById("device3").value);
+			var device4num = Number(document.getElementById("device4").value);
+			var device5num = Number(document.getElementById("device5").value);
+			var device6num = Number(document.getElementById("device6").value);
+			var device7num = Number(document.getElementById("device7").value);
+			var device8num = Number(document.getElementById("device8").value);
+			
+			let factor1 = 17/60;
+			let factor2 = 0.4;
+			let factor3 = 4/15;
+			
+			let result1 = "device1:\n0.85:" + Math.ceil(device1num*factor1) + "\n0.95:" + (device1num-Math.ceil(device1num*factor1)-Math.floor(device1num*factor2)) + "\n1.2:" + Math.floor(device1num*factor2)+"\n"
+			let result2 = "device1:\n0.85:" + Math.ceil(device2num*factor1) + "\n0.95:" + (device2num-Math.ceil(device2num*factor1)-Math.floor(device2num*factor2)) + "\n1.2:" + Math.floor(device2num*factor2)+"\n"
+			let result3 = "device1:\n0.85:" + Math.ceil(device3num*factor1) + "\n0.95:" + (device3num-Math.ceil(device3num*factor1)-Math.floor(device3num*factor2)) + "\n1.2:" + Math.floor(device3num*factor2)+"\n"
+			let result4 = "device1:\n0.85:" + Math.ceil(device4num*factor1) + "\n0.95:" + (device4num-Math.ceil(device4num*factor1)-Math.floor(device4num*factor2)) + "\n1.2:" + Math.floor(device4num*factor2)+"\n"
+			let result5 = "device1:\n0.8:" + Math.ceil(device5num*factor3) + "\n0.95:" + (device5num-Math.ceil(device5num*factor3)-Math.floor(device5num*factor2)) + "\n1.2:" + Math.floor(device5num*factor2)+"\n"
+			let result6 = "device1:\n0.8:" + Math.ceil(device6num*factor3) + "\n0.95:" + (device6num-Math.ceil(device6num*factor3)-Math.floor(device6num*factor2)) + "\n1.2:" + Math.floor(device6num*factor2)+"\n"
+			let result7 = "device1:\n0.8:" + Math.ceil(device7num*factor3) + "\n0.95:" + (device7num-Math.ceil(device7num*factor3)-Math.floor(device7num*factor2)) + "\n1.2:" + Math.floor(device7num*factor2)+"\n"
+			let result8 = "device1:\n0.8:" + Math.ceil(device8num*factor3) + "\n0.95:" + (device8num-Math.ceil(device8num*factor3)-Math.floor(device8num*factor2)) + "\n1.2:" + Math.floor(device8num*factor2)+"\n"
+			alert("Factor = 0.85,0.95,1.2:\n"+result1+result2+result3+result4+"Factor = 0.8,0.95,1.2:\n"+result5+result6+result7+result8)
+			
+		}
+	
+	</script>
+</html>
